@@ -60,7 +60,7 @@ static CGFloat endPointMargin = 1.0f;
     _progressLayer.fillColor =  [[UIColor clearColor] CGColor];
     //指定path的渲染颜色
     _progressLayer.strokeColor  = [[UIColor blackColor] CGColor];
-    _progressLayer.lineCap = kCALineCapRound;
+  //  _progressLayer.lineCap = kCALineCapRound;
     _progressLayer.lineWidth = _lineWidth;
     _progressLayer.path = [path CGPath];
     _progressLayer.strokeEnd = 0;
@@ -76,14 +76,14 @@ static CGFloat endPointMargin = 1.0f;
     
     
     //用于显示结束位置的小点
-    _endPoint = [[UIImageView alloc] init];
-    _endPoint.frame = CGRectMake(0, 0, _lineWidth - endPointMargin*2,_lineWidth - endPointMargin*2);
-    _endPoint.hidden = true;
-    _endPoint.backgroundColor = [UIColor blackColor];
-    _endPoint.image = [UIImage imageNamed:@"endPoint"];
-    _endPoint.layer.masksToBounds = true;
-    _endPoint.layer.cornerRadius = _endPoint.bounds.size.width/2;
-    [self addSubview:_endPoint];
+//    _endPoint = [[UIImageView alloc] init];
+//    _endPoint.frame = CGRectMake(0, 0, _lineWidth - endPointMargin*2,_lineWidth - endPointMargin*2);
+//    _endPoint.hidden = true;
+//    _endPoint.backgroundColor = [UIColor blackColor];
+//    _endPoint.image = [UIImage imageNamed:@"endPoint"];
+//    _endPoint.layer.masksToBounds = true;
+//    _endPoint.layer.cornerRadius = _endPoint.bounds.size.width/2;
+//    [self addSubview:_endPoint];
 }
 
 -(void)setProgress:(float)progress
