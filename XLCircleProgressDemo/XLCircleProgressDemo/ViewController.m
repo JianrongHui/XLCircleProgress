@@ -25,7 +25,7 @@
 -(void)addCircle
 {
     CGFloat margin = 85.0f;
-    CGFloat circleWidth = [UIScreen mainScreen].bounds.size.width - 2*margin;
+    CGFloat circleWidth = 186;// [UIScreen mainScreen].bounds.size.width - 2*margin;
     _circle = [[XLCircleProgress alloc] initWithFrame:CGRectMake(0, 0, circleWidth, circleWidth)];
     _circle.center = self.view.center;
     [self.view addSubview:_circle];

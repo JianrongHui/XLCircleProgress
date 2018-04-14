@@ -34,11 +34,11 @@
     //弧形进度条宽度
     float lineWidth = 35;
     // 字体
-    UIFont *percentFont = [UIFont boldSystemFontOfSize:55];
-    UIFont *timeFont = [UIFont systemFontOfSize:40];
+    UIFont *percentFont = [UIFont boldSystemFontOfSize:38];
+    UIFont *timeFont = [UIFont systemFontOfSize:25];
     // 竖直位置
-    CGFloat percentBottomToCenter = 30;
-    CGFloat timeTopToCenter = 35;
+    CGFloat percentBottomToCenter = 16;
+    CGFloat timeTopToCenter = 25;
     //-------------------------------------------------<//
     
     // 百分比
