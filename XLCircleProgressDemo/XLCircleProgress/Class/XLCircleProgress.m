@@ -13,6 +13,7 @@
 {
     XLCircle* _circle;
     UILabel *_percentLabel;
+    UILabel *_timeLabel;
 }
 
 -(instancetype)initWithFrame:(CGRect)frame
@@ -28,6 +29,8 @@
 -(void)initUI
 {
     float lineWidth = 0.1*self.bounds.size.width;
+    
+    // 百分比
     _percentLabel = [[UILabel alloc] initWithFrame:self.bounds];
     _percentLabel.textColor = [UIColor whiteColor];
     _percentLabel.textAlignment = NSTextAlignmentCenter;
@@ -35,6 +38,14 @@
     _percentLabel.text = @"0%";
     [self addSubview:_percentLabel];
     
+    _timeLabel = [[UILabel alloc] initWithFrame:self.bounds];
+    _timeLabel.textColor = [UIColor whiteColor];
+    _timeLabel.textAlignment = NSTextAlignmentCenter;
+    _timeLabel.font = [UIFont boldSystemFontOfSize:30];
+    _timeLabel.text = @"00:05";
+    [self addSubview:_timeLabel];
+    
+    // 时间
     _circle = [[XLCircle alloc] initWithFrame:self.bounds lineWidth:lineWidth];
     [self addSubview:_circle];
 }
