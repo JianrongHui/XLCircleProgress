@@ -18,13 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor colorWithRed:79/255.0 green:80/255.0 blue:81/255.0 alpha:1];
     [self addCircle];
 }
 
 -(void)addCircle
 {
-    CGFloat margin = 15.0f;
+    CGFloat margin = 85.0f;
     CGFloat circleWidth = [UIScreen mainScreen].bounds.size.width - 2*margin;
     _circle = [[XLCircleProgress alloc] initWithFrame:CGRectMake(0, 0, circleWidth, circleWidth)];
     _circle.center = self.view.center;

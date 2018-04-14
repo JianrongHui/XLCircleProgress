@@ -16,6 +16,7 @@
 		18760CC31E1E68DE00007F02 /* XLCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18760CBE1E1E68DE00007F02 /* XLCircle.m */; };
 		18760CC41E1E68DE00007F02 /* XLCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 18760CC01E1E68DE00007F02 /* XLCircleProgress.m */; };
 		18760CC51E1E68DE00007F02 /* endPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 18760CC21E1E68DE00007F02 /* endPoint.png */; };
+		4382FA296AF0566E4C21F871 /* libPods-XLCircleProgressDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5268EB9602A5158049998FD /* libPods-XLCircleProgressDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		18760CBF1E1E68DE00007F02 /* XLCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCircleProgress.h; sourceTree = "<group>"; };
 		18760CC01E1E68DE00007F02 /* XLCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCircleProgress.m; sourceTree = "<group>"; };
 		18760CC21E1E68DE00007F02 /* endPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endPoint.png; sourceTree = "<group>"; };
+		B0253260D269974F70C89E64 /* Pods-XLCircleProgressDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLCircleProgressDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-XLCircleProgressDemo/Pods-XLCircleProgressDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C5268EB9602A5158049998FD /* libPods-XLCircleProgressDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLCircleProgressDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79831B5D422943572689073 /* Pods-XLCircleProgressDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLCircleProgressDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XLCircleProgressDemo/Pods-XLCircleProgressDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4382FA296AF0566E4C21F871 /* libPods-XLCircleProgressDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +58,8 @@
 				18760CA21E1E685800007F02 /* XLCircleProgress */,
 				18760C8A1E1E684500007F02 /* XLCircleProgressDemo */,
 				18760C891E1E684500007F02 /* Products */,
+				C1FD0D62733BB26CE91D14B3 /* Pods */,
+				77F1CA8D48DB9AADB21F8748 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +123,23 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		77F1CA8D48DB9AADB21F8748 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5268EB9602A5158049998FD /* libPods-XLCircleProgressDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1FD0D62733BB26CE91D14B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F79831B5D422943572689073 /* Pods-XLCircleProgressDemo.debug.xcconfig */,
+				B0253260D269974F70C89E64 /* Pods-XLCircleProgressDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +147,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18760C9F1E1E684500007F02 /* Build configuration list for PBXNativeTarget "XLCircleProgressDemo" */;
 			buildPhases = (
+				0EBE0D7BC241ADFA75C9B0EA /* [CP] Check Pods Manifest.lock */,
 				18760C841E1E684500007F02 /* Sources */,
 				18760C851E1E684500007F02 /* Frameworks */,
 				18760C861E1E684500007F02 /* Resources */,
@@ -182,6 +207,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EBE0D7BC241ADFA75C9B0EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XLCircleProgressDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18760C841E1E684500007F02 /* Sources */ = {
@@ -308,6 +354,7 @@
 		};
 		18760CA01E1E684500007F02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F79831B5D422943572689073 /* Pods-XLCircleProgressDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XLCircleProgressDemo/Info.plist;
@@ -319,6 +366,7 @@
 		};
 		18760CA11E1E684500007F02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0253260D269974F70C89E64 /* Pods-XLCircleProgressDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XLCircleProgressDemo/Info.plist;

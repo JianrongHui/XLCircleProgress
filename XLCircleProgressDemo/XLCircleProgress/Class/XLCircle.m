@@ -7,6 +7,7 @@
 //
 
 #import "XLCircle.h"
+#import <Masonry.h>
 
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
 
@@ -44,11 +45,10 @@ static CGFloat endPointMargin = 1.0f;
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(centerX, centerY) radius:radius startAngle:(-0.5f*M_PI) endAngle:1.5f*M_PI clockwise:YES];
     
     //添加背景圆环
-
     CAShapeLayer *backLayer = [CAShapeLayer layer];
     backLayer.frame = self.bounds;
     backLayer.fillColor =  [[UIColor clearColor] CGColor];
-    backLayer.strokeColor  = [UIColor colorWithRed:50.0/255.0f green:50.0/255.0f blue:50.0/255.0f alpha:1].CGColor;
+    backLayer.strokeColor  = [UIColor whiteColor].CGColor;
     backLayer.lineWidth = _lineWidth;
     backLayer.path = [path CGPath];
     backLayer.strokeEnd = 1;
@@ -68,7 +68,8 @@ static CGFloat endPointMargin = 1.0f;
     //设置渐变颜色
     CAGradientLayer *gradientLayer =  [CAGradientLayer layer];
     gradientLayer.frame = self.bounds;
-    [gradientLayer setColors:[NSArray arrayWithObjects:(id)[RGB(255, 151, 0) CGColor],(id)[RGB(255, 203, 0) CGColor], nil]];
+//    [gradientLayer setColors:[NSArray arrayWithObjects:(id)[RGB(255, 151, 0) CGColor],(id)[RGB(255, 203, 0) CGColor], nil]];
+    [gradientLayer setColors:[NSArray arrayWithObjects:(id)[RGB(54, 219, 220) CGColor],(id)[RGB(54, 219, 220) CGColor], nil]];
     gradientLayer.startPoint = CGPointMake(0, 0);
     gradientLayer.endPoint = CGPointMake(0, 1);
     [gradientLayer setMask:_progressLayer]; //用progressLayer来截取渐变层
